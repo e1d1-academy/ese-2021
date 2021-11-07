@@ -68,9 +68,9 @@ loop:
 .balign 4
 handler:
 # attention, no care of registers.
-# read time (64 bit)
     csrr t0, mstatus
-    csrr t3, mcause
+    csrr t1, mcause
+# read time (64 bit)
     li t0, mtime
 # get current time
     lw t3, 0(t0)
